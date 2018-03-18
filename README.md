@@ -2,6 +2,7 @@
 ### App for recipe notes
 download and run :
 ```
+npm i
 npm start
 ```
 -Adding ingridients
