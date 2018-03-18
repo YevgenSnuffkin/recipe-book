@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Recipes = ({allIngridients, thisIngridients, recipes, addToRecipe, addRecipe }) => {
+import '../stylesheets/recipes.css'
+
+const Recipes = ({allIngridients, thisIngridients, recipes, addToRecipe, addRecipe, deleteRecipe }) => {
 
   let recipeName
 	 	
@@ -16,24 +18,38 @@ const Recipes = ({allIngridients, thisIngridients, recipes, addToRecipe, addReci
   }
 
 	const thisIng = thisIngridients.map(item => <li key = {item}>{item}
-	<button>Remove</button></li>)
+
+	</li>)
 
 	const allIng = allIngridients.map(item => <li key = {item.name}>{item.name}
-	<button onClick = { () => addToRecipe(item.name) }>Add</button></li>)
+	<button className="pure-button pure-button-primary" onClick = { () => addToRecipe(item.name) }>Add</button></li>)
 
 	const recipesMap = recipes.map(item => <li key = {recipes.indexOf(item)}>{item.recipe.name}
-	<button>Delete</button></li>)
+	<button className="pure-button" onClick = { () => deleteRecipe(item) }>
+		<i className="fas fa-trash"></i>
+		Delete
+	</button></li>)
 
 	return (
-		<div>
+		<div className="whiteWrapper">
+
+		All Ingridients:
 	    <ul>{allIng}</ul>
+
+	    New Recipe:
 	    <ul>{thisIng}</ul>
-	    <div className = "recipeBox"><ul>{recipesMap}</ul></div>
-	    <form onSubmit = { onRecipeSubmit }>
-	      <input type = 'text' placeholder='Name Your Recipe'
-	        ref = { el => recipeName = el } />
-	      <button>Submit</button>
-	    </form>
+
+	    All Recipes:
+	    <div><ul>{recipesMap}</ul></div>
+
+		<div className="pure-form">
+			    <form onSubmit = { onRecipeSubmit }>
+			      <input type = 'text' placeholder='Name Your Recipe'
+			        ref = { el => recipeName = el } />
+			      <button className="pure-button pure-button-primary">Submit</button>
+			    </form>
+		</div>
+
 	    </div>
 	)
 }

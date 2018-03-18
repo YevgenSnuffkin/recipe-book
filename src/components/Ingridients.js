@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../stylesheets/new.css'
+import '../stylesheets/ingridients.css'
 
 const Ingrients = ({ handleSubmit, allIngridients, deleteIngridient, editIngridient, toggleEditing }) => {
   
@@ -34,7 +34,7 @@ const Ingrients = ({ handleSubmit, allIngridients, deleteIngridient, editIngridi
 		    <form onSubmit = { onSubmitEdit }>
 		      <input type = 'text' placeholder='Enter New Name'
 		        ref = { el => newName = el } />
-		      <button>Submit</button>
+		      <button className="pure-button pure-button-primary">Submit</button>
 		    </form>  
 	  	)
   	}
@@ -49,19 +49,28 @@ const Ingrients = ({ handleSubmit, allIngridients, deleteIngridient, editIngridi
 
   const ingridients = allIngridients.map(item => 
   	<li key = { item.name }>{item.name}
-  	<button onClick = { () => deleteIngridient(item) } >Delete</button>
-  	<button onClick = { () => toggleEditing(item.name) } >Edit</button>
+  	<button className="pure-button buttonEditable" onClick = { () => deleteIngridient(item) }>
+      <i className="fas fa-trash"></i>
+      Delete
+    </button>
+    
+    <button className="pure-button buttonEditable" onClick = { () => toggleEditing(item.name) }>
+      <i className="fas fa-edit"></i>
+      Edit
+    </button>
   	<Edit editing = { item.editing } />
   	</li>)
   
   return (
-  	<div className="ingridient-list"> 
+  	<div className="whiteWrapper"> 
   	<ul>{ ingridients }</ul>
+    <div className="pure-form">
     <form onSubmit = { onSubmit }>
       <input type = 'text' placeholder='Enter Your Ingrients'
         ref = { el => ingridientName = el } />
-      <button>Submit</button>
+      <button className="pure-button pure-button-primary">Submit</button>
     </form>
+    </div>
     </div>
   )
 }

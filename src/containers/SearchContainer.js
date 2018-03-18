@@ -20,16 +20,17 @@ const SearchContainer = ({ searchTerm, recipes, searchFor }) => {
   const searchResults = filteredRecipes.map(recipe => {
     return(       
     <div className="foundRecipes" key={recipe.recipe.name}>
-      <div className="subject">{recipe.recipe.name}</div>
-      <div className="recipeName">{recipe.recipe.ing}</div>
+      <div className="subject">{recipe.recipe.name} recipe:</div>
+      <div className="recipeName">Ingridients: <ul> {recipe.recipe.ing.map(item =><li>add {item},</li>)} </ul></div>
     </div>    
     )     
   })
   
   return (
-    <div>
-    	<div><SearchInput className="search-input" onChange={searchUpdated} /></div>
-
+    <div  className="whiteWrapper">
+    	
+    	<form className="pure-form"><SearchInput className="pure-input" onChange={searchUpdated} /></form>
+    	Search Results: 
 		{searchResults}    	
 
     </div>

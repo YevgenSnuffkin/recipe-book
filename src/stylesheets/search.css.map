@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACZ,MAAM,EAAE,IAAI;EACZ,OAAO,EAAC,IAAI;EACZ,gBAAgB,EAAE,wBAAwB",
+"sources": ["_whiteWrapper.scss"],
+"names": [],
+"file": "search.css"
+}

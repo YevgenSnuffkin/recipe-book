@@ -1,0 +1,12 @@
+$margin: 15px;
+
+@import 'whiteWrapper';
+
+ul{
+	margin: $margin;
+	li{
+		button{
+			margin: $margin/2;
+		}
+	}
+}

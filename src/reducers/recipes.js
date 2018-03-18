@@ -23,7 +23,10 @@ export const recipes = ( state = {
         }
 
         case 'DELETE_RECIPE' : {
-            return {}
+            return {
+                ...state,
+                recipes: state.recipes.filter(item => item !== action.payload)
+            }
 
                 
         }

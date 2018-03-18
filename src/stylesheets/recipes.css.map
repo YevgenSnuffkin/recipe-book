@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACZ,MAAM,EAAE,IAAI;EACZ,OAAO,EAAC,IAAI;EACZ,gBAAgB,EAAE,wBAAwB;;ACC3C,EAAE;EACD,MAAM,EALE,IAAI;EAOX,YAAM;IACL,MAAM,EAAE,KAAS",
+"sources": ["_whiteWrapper.scss","recipes.scss"],
+"names": [],
+"file": "recipes.css"
+}

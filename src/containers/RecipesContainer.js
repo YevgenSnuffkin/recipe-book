@@ -1,15 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Recipes from '../components/Recipes'
-import { addToRecipe, addRecipe } from '../actions/'
+import { addToRecipe, addRecipe, deleteRecipe } from '../actions/'
 
 
-const RecipesContainer = ({allIngridients, thisIngridients, recipes, addToRecipe, addRecipe}) => (
+const RecipesContainer = ({allIngridients, thisIngridients, recipes, addToRecipe, addRecipe, deleteRecipe}) => (
   <Recipes allIngridients = {allIngridients}
     thisIngridients = {thisIngridients}
     recipes = {recipes}
     addToRecipe = { (item) => addToRecipe(item) }
     addRecipe = { (recipe) => addRecipe(recipe) }
+    deleteRecipe = { (item) => deleteRecipe(item) }
    />
 )
 
@@ -24,6 +25,6 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-  { addToRecipe, addRecipe }
+  { addToRecipe, addRecipe, deleteRecipe }
 )( RecipesContainer )
 

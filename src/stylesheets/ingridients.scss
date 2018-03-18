@@ -1,0 +1,19 @@
+$margin: 10px;
+
+@import 'whiteWrapper';
+
+input{
+	margin: $margin;
+}
+
+ul{
+	margin: $margin;
+	li{
+		list-style: none;
+	}
+}
+
+.buttonEditable{
+	margin: $margin/2;
+	border:none;
+}

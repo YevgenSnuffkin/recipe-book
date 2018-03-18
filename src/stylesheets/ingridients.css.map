@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACZ,MAAM,EAAE,IAAI;EACZ,OAAO,EAAC,IAAI;EACZ,gBAAgB,EAAE,wBAAwB;;ACC3C,KAAK;EACJ,MAAM,EALE,IAAI;;AAQb,EAAE;EACD,MAAM,EATE,IAAI;EAUZ,KAAE;IACD,UAAU,EAAE,IAAI;;AAIlB,eAAe;EACd,MAAM,EAAE,GAAS;EACjB,MAAM,EAAC,IAAI",
+"sources": ["_whiteWrapper.scss","ingridients.scss"],
+"names": [],
+"file": "ingridients.css"
+}
