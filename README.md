@@ -5,10 +5,10 @@ download and run :
 npm start
 ```
 -Adding ingridients
-![alt text](https://pp.userapi.com/c840330/v840330598/67b80/R72Z0pp3aNQ.jpg)
+![alt text](https://pp.userapi.com/c834400/v834400545/edb75/H8Rgdeny61c.jpg)
 
 -Creating recipes
-![alt text](https://drive.google.com/open?id=1yQf-d2PfR19kb5rffjbKqrvaXOoR78UB)
+![alt text](https://pp.userapi.com/c834400/v834400545/edb7f/4WSS33M2AGA.jpg)
 
 -Searching recipes by name or by ingridient
-![alt text](https://drive.google.com/open?id=1E9o2DNVXzmxhK_B6617locmGx0MlYTDA)
+![alt text](https://pp.userapi.com/c834400/v834400545/edb89/vG3Cyy1bVqI.jpg)
